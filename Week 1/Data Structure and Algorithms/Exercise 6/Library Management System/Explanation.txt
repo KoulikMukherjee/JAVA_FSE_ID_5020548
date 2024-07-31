@@ -1,0 +1,36 @@
+Explain linear search and binary search algorithms
+      Linear Search:
+      	Linear search is the simplest search algorithm.
+      	It checks each element in the list until the target element is found or the list ends.
+      	Time Complexity: 𝑂(𝑛), where 𝑛 is the number of elements in the list.
+      
+      Binary Search:
+      	Binary search is an efficient algorithm for finding an element in a sorted list.
+      	It repeatedly divides the search interval in half. If the target value is less than the middle element, 
+            it searches the left half, otherwise, it searches the right half.
+      	Time Complexity: 𝑂(log𝑛), where 𝑛 is the number of elements in the list.
+      	Requirement: The list must be sorted
+
+Compare the time complexity of linear and binary search.
+      Time Complexity:
+            Linear Search:
+                  Best case: 𝑂(1)   [If the target element is the first element].
+                  Worst case: 𝑂(𝑛)  [If the target element is the last element or not present].
+            Binary Search:
+                  Best case: 𝑂(1)      [If the target element is the middle element).
+                  Worst case: 𝑂(log⁡𝑛)  [If the search space is repeatedly halved until the element is found or the search space is empty].
+
+      When to Use Each Algorithm:
+            Linear Search:
+                   Use when the list is unsorted.
+                   Use when the list is unsorted.
+                   Suitable for small datasets where the overhead of sorting is not justified.
+                   Easier to implement for general cases without the need for sorting.
+            
+            Binary Search:
+                  Use when the list is sorted.
+                  Ideal for large datasets where the faster search time outweighs the cost of sorting.
+                  More efficient than linear search for sorted datasets due to its logarithmic time complexity.
+                  More efficient than linear search for sorted datasets due to its logarithmic time complexity.
+
+      This example demonstrates how to use both search algorithms in a library management system and when to choose each based on the dataset characteristics. 

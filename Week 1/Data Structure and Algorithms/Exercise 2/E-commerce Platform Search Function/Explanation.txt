@@ -1,0 +1,40 @@
+Understand Asymptotic Notation
+
+    Big O Notation:
+       Big O Notation is a mathematical notation used to describe the upper bound of an algorithm's running time. 
+       It provides a high-level understanding of the algorithm's efficiency and performance in terms of input size. 
+       The notation focuses on the worst-case scenario, making it useful for comparing the efficiency of different 
+       algorithms.
+
+    Best, Average, and Worst-Case Scenarios
+      Best Case: The scenario where the algorithm performs the minimum number of operations. For a search operation, 
+                 this might be finding the desired element immediately.
+      Average Case: The scenario that considers the average number of operations over all possible inputs. 
+                    This provides a more realistic expectation of performance.
+      Worst Case: The scenario where the algorithm performs the maximum number of operations. For a search operation, 
+                  this could be when the desired element is the last one to be checked or not present at all.
+
+Analysis
+
+    Time Complexity->
+
+        Linear Search:
+            Best Case: 𝑂(1)- The element is found at the first position.
+            Average Case: 𝑂(𝑛) - The element is somewhere in the middle.
+            	    Worst Case: 𝑂(𝑛) - The element is at the last position or not present at all.
+
+       	 Binary Search:
+           	     Best Case: 𝑂(1) - The element is found at the mid position on the first check.
+                   Average Case: 𝑂(log⁡ 𝑛) - The element is somewhere in the sorted array.
+            Worst Case: 𝑂(log 𝑛) - The element is not present, requiring maximum divisions of the search interval.
+
+        Suitability of the Platform
+
+        Binary Search is More efficient for larger datasets due to its logarithmic time complexity. Requires the data 
+        to be sorted, which adds an initial sorting overhead but pays off in search performance for large datasets. 
+	For an e-commerce platform with potentially large datasets, binary search is generally more suitable due to
+	its significantly better performance with large arrays. 
+        The initial sorting of the array can be managed, and the fast search performance will enhance the user 
+	experience.
+
+     

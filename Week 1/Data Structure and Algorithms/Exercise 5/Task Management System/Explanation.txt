@@ -1,0 +1,27 @@
+Explain the different types of linked lists (Singly Linked List, Doubly Linked List)
+   Types of Linked Lists:
+          Singly Linked List: Each node contains a value and a reference (or link) to the next node in the sequence. It allows traversal in one direction (forward).
+          Doubly Linked List: Each node contains a value and two references: one to the next node and one to the previous node. It allows traversal in both directions (forward and backward).
+      Advantages of Linked Lists:
+          Dynamic Size: Linked lists can grow and shrink dynamically without the need for resizing or reallocating memory.
+          Efficient Insertions/Deletions: Inserting or deleting a node can be done in 𝑂(1) time if the position is known, unlike arrays which may require shifting elements.	
+Analyze the time complexity of each operation.
+      Time Complexity:
+          Add Operation:
+            Best case: 𝑂(1)   [If adding to an empty list].
+            Worst case: 𝑂(𝑛)  [If adding to the end of a non-empty list].
+          Search Operation:
+            Best case: 𝑂(1)   [If the first element is the one we are looking for].
+            Worst case: 𝑂(𝑛)  [If the element is not present or is the last element].
+          Delete Operation:
+            Best case: 𝑂(1)   [If the head node is the one to be deleted].
+            Worst case: 𝑂(𝑛)  [If the element is not present or is the last element].
+          Traverse Operation: 𝑂(𝑛)   [We need to visit each node].
+
+
+  Discuss the advantages of linked lists over arrays for dynamic data
+
+          Advantages of Linked Lists over Arrays for Dynamic Data:
+              Dynamic Size: Linked lists do not require a predefined size and can grow or shrink as needed.
+              Efficient Insertions/Deletions: Unlike arrays, linked lists do not require shifting elements, making insertions and deletions more efficient, especially for large datasets.
+              Memory Utilization: Linked lists allocate memory as needed, which can be more efficient for varying workloads compared to arrays that allocate a fixed block of memory. Linked lists are particularly useful for applications where the number of elements is not known in advance or frequently changes, and where efficient insertions and deletions are critical. 

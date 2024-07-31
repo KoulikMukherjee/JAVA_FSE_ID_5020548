@@ -1,0 +1,59 @@
+Why Data Structures and Algorithms are Essential in Handling Large Inventories:
+    •	Efficiency: Proper data structures and algorithms ensure efficient data storage, retrieval, and management, which is crucial for handling large inventories.
+    •	Scalability: As the inventory grows, the system must handle increased data without performance degradation.
+    •	Speed: Quick access to inventory data (e.g., searching for a product, updating quantities) is critical for operational efficiency.
+    •	Memory Management: Efficient data structures help in optimal memory usage, preventing wastage and ensuring the system can handle large datasets.
+    •   Maintain Data Integrity: They help ensure that inventory data remains accurate and consistent over time
+
+Types of Data Structures Suitable for This Problem:
+    •	HashMap: Ideal for scenarios where quick search, insert, and delete operations are required, as it allows for average O(1) time complexity for these operations.
+
+Analyze the time complexity of each operation (add, update, delete) in your chosen data structure.
+    • Data Structure Chosen: HashMap<String, Product>
+
+    • Time complexities of each methods:
+        1) Add Product (addProduct):
+              Operation: Insert a product into the HashMap.
+              
+              Time Complexity:
+                  Average Case: O(1) - HashMap uses a hashing mechanism, which on average, allows for constant-time insertion.
+                  Worst Case: O(n) - This can occur if many hash collisions happen, and all elements are placed in the same bucket, effectively making the bucket a
+                                     linked list.
+        
+        2) Update Product (updateProduct):
+              
+              Operation: Update the product details if the product exists in the HashMap.
+             
+              Time Complexity:
+                  Average Case: O(1) - Finding and updating an entry in the HashMap is on average constant time.
+                  Worst Case: O(n) - Similar to insertion, in the worst case, due to hash collisions, finding an element could take linear time.
+   
+        3) Delete Product (deleteProduct):
+    
+              Operation: Remove a product from the HashMap.
+              
+              Time Complexity:
+                  Average Case: O(1) - Removing an entry by its key is constant time on average.
+                  Worst Case: O(n) - Again, due to possible hash collisions, it could degrade to linear time in the worst case.
+          
+    • Discuss how you can optimize these operations.
+        
+        To optimize the operations further, several strategies can be implemented:
+        
+        1. Choosing an Appropriate Initial Capacity and Load Factor:
+              Initial Capacity: Setting an initial capacity that is close to the expected number of entries can reduce the number of rehash operations.
+              Load Factor: The load factor (default is 0.75) controls the trade-off between space and time efficiency. A lower load factor reduces the chance of
+                            collision but increases space usage.
+        
+        2. Handling Collisions Efficiently:
+              Separate Chaining with Linked List: The default in Java’s HashMap is separate chaining using linked lists, which can be improved by using other 
+                                                  data structures.
+              Separate Chaining with Balanced Trees: Starting from Java 8, HashMap switches from linked lists to balanced trees (e.g., red-black trees) when a 
+                                                     bucket exceeds a certain threshold. This ensures that even in cases of hash collisions, the time complexity 
+                                                     remains O(log n).
+        
+        3. Concurrent Access:
+              ConcurrentHashMap: For multi-threaded environments, using ConcurrentHashMap instead of HashMap ensures thread-safe operations without significant 
+                                 performance hits.
+        
+ 

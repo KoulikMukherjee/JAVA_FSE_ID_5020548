@@ -1,0 +1,32 @@
+Explain how arrays are represented in memory and their advantages
+Arrays in Memory:
+An array is a contiguous block of memory locations, where each element can be accessed using its index. The memory address of the first element (the base address) allows for direct computation of the address of any other element.
+ Advantages of Arrays:
+        Constant Time Access: Since arrays provide direct access to elements using their index, access time is 𝑂(1).
+        Cache Friendly: Contiguous memory allocation makes arrays cache-friendly, improving performance for sequential access.
+
+Analyze the time complexity of each operation (add, search, traverse, delete).
+      Time Complexity:
+          Add Operation:
+                Best case: 𝑂(1)   [If there is space in the array].
+                Worst case: 𝑂(1)  [Same as best case, since we are adding at the end].
+          Search Operation:
+                Best case: 𝑂(1)   [If the first element is the one we are looking for].
+                Worst case: 𝑂(𝑛)  [If the element is not present or is the last element].
+          Delete Operation:
+                Best case: 𝑂(1)   [If the first element is the one to be deleted].
+                Worst case: 𝑂(𝑛)  [If the element is not present or is the last element, due to shifting].
+          Traverse Operation:𝑂(𝑛) [We need to visit each element].
+
+    Discuss the limitations of arrays and when to use them.
+
+        Limitations of Arrays:
+           o Fixed Size: Arrays have a fixed size which must be defined at the time of creation. This can lead to wasted space if the array is too large or overflow if the array is too small.
+           o Insertion and Deletion: These operations can be inefficient due to the need to shift elements.
+           o Dynamic Data: Not suitable for situations where the size of the data set changes frequently.
+    
+        When to Use Arrays:
+           o When you have a fixed number of elements.
+           o When you need fast access to elements using an index.
+           o When the cost of insertion and deletion operations is not a concern.
+   
